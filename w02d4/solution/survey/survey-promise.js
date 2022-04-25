@@ -12,13 +12,12 @@ rlp.questionAsync('What do you think of Node.js? ')
     answers.push(answer);
     return rlp.questionAsync('What\'s your name? ');
   })
-  .then((answer) => {
-    answers.push(answer);
-    return rlp.questionAsync('What\'s your favourite activity? ');
+  .catch((err)=>{
+    console.log(err);
   })
   .then((answer) => {
     answers.push(answer);
-    return rlp.questionAsync('How fuzzy are monkeys? ');
+    return rlp.questionAsync('What\'s your favourite activity? ');
   })
   .then((answer) => {
     answers.push(answer);

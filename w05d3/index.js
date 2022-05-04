@@ -36,6 +36,26 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/objective/:id', (req, res) => {
+  const id = req.params.id;
+
+  const queryText = `
+  SELECT id, question, answer, type 
+  FROM objectives 
+  WHERE id = $1;`;
+
+  dbclient.query(queryText,[id])
+  .then((response) => {
+    // console.log(`response`,response);
+    const templateVars = {objectives: response.rows};
+    res.render('objective',templateVars);
+  })
+  .catch((error) => {
+    console.log('error',error);
+  });
+
+});
+
 const port = 8081;
 app.listen(port, () => {
   console.log(`app is listening on port ${port}`);

@@ -12,8 +12,9 @@
   <table>
     <% for (let ii = 0; ii < objectives.length; ii++) { %>
       <tr>
-        <td><a href="/objective/<%= objectives[ii].id %>"><%= objectives[ii].id %></a></td>
-        <td><%= objectives[ii].question %></td>  
+        <td><%= objectives[ii].id %></td>
+        <td><%= objectives[ii].question %></td>
+        <td><%= objectives[ii].answer %></td>  
       </tr>
     <% } %>
   </table>

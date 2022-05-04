@@ -1,0 +1,17 @@
+{
+  "name": "w05d3",
+  "version": "1.0.0",
+  "description": "Interacting with the SQL Database of Learning Questions and Answers for Bootcamp",
+  "main": "spottool.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "pg": "^8.7.3"
+  }
+}
